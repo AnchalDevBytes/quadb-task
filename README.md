@@ -4,7 +4,7 @@
 
 QuadB Task is a simple Movie Booking App developed using React, Redux Toolkit, and TailwindCSS. This app fetches movie data from an external API, maintains user details in local storage, and allows users to book tickets for their favorite movies.
 
-Deployed link : [QuadB-task Netlify](https://twitter.com/YourTwitterHandle)
+Deployed link : [QuadB-task Netlify](https://quadbapp.netlify.app/)
 
 ## Features
 
