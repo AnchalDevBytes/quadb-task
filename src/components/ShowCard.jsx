@@ -11,7 +11,7 @@ const ShowCard = ({ show }) => {
   } = show;
 
   return (
-    <Link to={`/movie/${show.id}`} className="w-[250px] mx-auto bg-gray-800 text-white rounded-md overflow-hidden shadow-md hover:scale-105 hover:bg-gray-950 transition-all">
+    <Link to={`/movie/${show.id}`} id='main' className={mainStyles}>
       <img className="w-full h-40 object-cover" src={image?.medium} alt={name} />
 
       <div className="p-4">
@@ -23,5 +23,8 @@ const ShowCard = ({ show }) => {
     </Link>
   );
 };
+
+//tailwind classes
+const mainStyles =`w-[250px] mx-auto bg-gray-800 text-white rounded-md overflow-hidden shadow-md hover:scale-105 hover:bg-gray-950 transition-all`
 
 export default ShowCard;

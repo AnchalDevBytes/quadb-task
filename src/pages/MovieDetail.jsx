@@ -56,10 +56,10 @@ const MovieDetail = () => {
   }
 
   return (
-    <section className="w-full h-full p-12 bg-fuchsia-950/90 backdrop-filter backdrop-blur">
-      <div className="max-w-5xl mx-auto my-1 -translate-y-5 bg-purple-950/80 backdrop-filter backdrop-blur shadow-black text-white rounded-md overflow-hidden shadow-md p-4">
+    <section className={containerStyles}>
+      <div id='main' className={mainStyles}>
         <h2 className="font-bold text-2xl mb-4">{movie.show.name}</h2>
-        <img className="w-full h-52 object-cover mb-4" src={movie.show.image?.medium} alt={movie.show.name} />
+        <img className={imgStyles} src={movie.show.image?.medium} alt={movie.show.name} />
 
         <p className="text-gray-400 mb-2">Genres: {movie.show.genres?.join(', ')}</p>
         <p className="text-gray-400 mb-2">Premiered: {movie.show.premiered}</p>
@@ -71,8 +71,9 @@ const MovieDetail = () => {
         </div>
 
         <button
+          id='bookTicketBtn'
           onClick={() => setShowModal(true)}
-          className="p-4 flex mx-auto bg-fuchsia-700 rounded-md hover:bg-fuchsia-800 active:bg-fuchsia-900 transition-all mb-5"
+          className={bookTicketBtnStyles}
         >
           Book Ticket
         </button>
@@ -87,7 +88,7 @@ const MovieDetail = () => {
                   <p className="text-green-500 mb-4">Ticket booked successfully!</p>
                   <h6 className='text-sm tracking-wider font-medium text-purple-200 mb-2'>Name : {userDetails.name}</h6>
                   <h6 className='text-sm tracking-wider font-medium text-purple-200 mb-2'>Email : {userDetails.email}</h6>
-                  <Link to="/" className='text-medium text-xs my-2 text-yellow-400 tracking-widest border py-2 px-2 rounded bg-fuchsia-800/50'>Book More Movies</Link>
+                  <Link to="/" id='formSubmittionLink' className={formSubmittionLinkStyles}>Book More Movies</Link>
                 </div>
               ) : (
                 <form className="flex flex-col max-w-md">
@@ -133,6 +134,13 @@ const MovieDetail = () => {
     </section>
   );
 };
+
+//tailwind classes
+const containerStyles =`w-full min-h-screen md:p-12 p-5 pt-10 flex items-center bg-fuchsia-950/90 backdrop-filter backdrop-blur`
+const mainStyles = `max-w-5xl md:min-h-[70vh] lg:min-h-full mx-auto my-1 -translate-y-5 bg-purple-950/80 backdrop-filter backdrop-blur shadow-black text-white rounded-md overflow-hidden shadow-md p-4 flex flex-col justify-between`
+const imgStyles = `w-full h-48 md:h-96 object-cover mb-4`
+const bookTicketBtnStyles = `p-4 flex mx-auto bg-fuchsia-700 rounded-md hover:bg-fuchsia-800 active:bg-fuchsia-900 transition-all mb-5`
+const formSubmittionLinkStyles = `text-medium text-xs my-2 text-yellow-400 tracking-widest border py-2 px-2 rounded bg-fuchsia-800/50`
 
 export default MovieDetail;
 

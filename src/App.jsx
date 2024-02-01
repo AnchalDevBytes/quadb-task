@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { getAllMovies } from './redux/dataSlice';
-import Header from './components/Header';
 import { Outlet } from 'react-router-dom';
-import Footer from './components/Footer';
+import { Footer, Header } from './components';
 
 const App = () => {
 
@@ -16,12 +15,14 @@ const App = () => {
   return (
     <>
       <Header/>
-        <div className='h-[calc(100vh-145px)] w-screen bg-[url("./assets/movieBg.jpg")] bg-center bg-cover bg-no-repeat'>
+        <div className={mainStyles}>
           <Outlet/>
         </div>
       <Footer/>
     </>
   )
 }
+
+const mainStyles = `min-h-screen lg:min-h-[calc(100vh-150px)] w-screen bg-[url("./assets/movieBg.jpg")] bg-center bg-cover bg-no-repeat`
 
 export default App
