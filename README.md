@@ -6,6 +6,8 @@ QuadB Task is a simple Movie Booking App developed using React, Redux Toolkit, a
 
 Deployed link : [QuadB-task Netlify](https://quadbapp.netlify.app/)
 
+![HOME](./src/assets/home.png)
+
 ## Features
 
 - **Movie Listings:** View a list of highlighted movies.
@@ -45,6 +47,13 @@ Deployed link : [QuadB-task Netlify](https://quadbapp.netlify.app/)
 * Home: Displays a list of highlighted movies.
 * MovieDetail: Displays detailed information about a selected movie and allows users to book tickets.
 * Footer: Displays information about the app and navigation links.
+
+## Other Screenshots
+
+![MOVIE](./src/assets/movie.png)
+
+![BOOKING](./src/assets/booking.png)
+
 
 ### You can check the deployed link and contact at [E-mail](anchalraj20045@gmail.com) or [Twitter](https://twitter.com/AnchalTwt)
 
